@@ -1,0 +1,41 @@
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.container{
+   /* background-color: lightslategray; */
+   /* border: 2px solid aquamarine; */
+   margin: 10px;
+   padding:5px;
+   color: white;
+   border-radius: 10px;
+}
+
+.single-container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-gap: 20px;
+}
+
+.half-width{
+   display:grid;
+   grid-template-columns: 3fr 1fr;
+
+}
+/* .country{
+   background-color: lightslategray;
+   border: 2px solid aquamarine;
+   margin: 10px;
+   padding:5px;
+   color: white;
+   border-radius: 10px;
+}
+.country img{
+   width:200px;
+}
+.country-container{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-gap: 10px;
+} */
