@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Container = (props) => {
-    console.log(props.cart)
+    // console.log(props.cart);
     // const { cart } = props;
     // let total = 0;
     // for (const celebritie of cart) {
     //     total = total + celebritie.salary;
     // }
+
     return (
         <div>
             <h2>Total celebritie:{props.cart.length}</h2>

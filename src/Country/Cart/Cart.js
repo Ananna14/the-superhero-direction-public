@@ -21,6 +21,7 @@ const Cart = () => {
     const handelToCart = (celebritie) => {
         const newCart = [...cart, celebritie]
         setCart(newCart)
+        console.log(newCart)
 
     }
 
@@ -28,7 +29,6 @@ const Cart = () => {
         <div className="half-width">
             <div className="container">
                 <h1>product:{celebrities.length}</h1>
-                {/* <button onClick={() => props.handelToCart(props.celebritie)} >add to cart</button> */}
                 <div className="single-container">
                     {
                         celebrities.map(celebritie => <Product
