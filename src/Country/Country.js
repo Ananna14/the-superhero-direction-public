@@ -25,14 +25,9 @@ const Country = () => {
             <h1>Bigg Boss 15 Contestants
                 list
             </h1>
-            <h2>Bugget: 200million</h2>
+            <h2>Total Budget: 200million</h2>
             <div className="single-container">
-                {/* {
-                    celebrities.map(celebritie => <Cart
-                        key={celebritie.name}
-                        celebritie={celebritie}></Cart>)
-                    // handelToCart={handelToCart}
-                } */}
+
             </div>
             {/* <div className="cart-container">
                 <Product cart={cart}></Product>

@@ -1,11 +1,16 @@
 import React from 'react';
 import { useEffect, useState } from 'react/cjs/react.development';
 import Product from '../../Product/Product';
+import Container from '../Container/Container';
+
+
+
 
 import './Cart.css'
 
 const Cart = () => {
     const [celebrities, setcelebrities] = useState([]);
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         fetch('./data.json')
@@ -13,27 +18,30 @@ const Cart = () => {
             .then(data => setcelebrities(data))
     }, [])
 
+    const handelToCart = (celebritie) => {
+        const newCart = [...cart, celebritie]
+        setCart(newCart)
+
+    }
 
     return (
         <div className="half-width">
             <div className="container">
                 <h1>product:{celebrities.length}</h1>
-                {/* <h1>length:{celebrities.length}</h1>
-                <h2><img className="img" src={img} alt="" /></h2>
-                <h2>Name: {name}</h2>
-                <h2>Age: {Age}</h2>
-                <h2>Role:{Role}</h2>
-                <h2>Salary:{salary}</h2> */}
                 {/* <button onClick={() => props.handelToCart(props.celebritie)} >add to cart</button> */}
                 <div className="single-container">
                     {
-                        celebrities.map(celebritie => <Product celebritie={celebritie}></Product>)
+                        celebrities.map(celebritie => <Product
+                            key={celebritie.name}
+                            celebritie={celebritie}
+                            handelToCart={handelToCart}
+                        ></Product>)
                     }
                 </div>
             </div>
             <div className="product">
-                <h2>total:</h2>
-                <h2>avg:</h2>
+                <Container cart={cart}></Container>
+
             </div>
 
 

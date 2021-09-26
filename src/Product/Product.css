@@ -2,4 +2,14 @@
     background-color: lightslategray;
     border: 2px solid aquamarine; 
     border-radius: 10px;
+    padding: 10px;
+}
+.regular-btn{
+    background-color: goldenrod;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /* border: none; */
+    width: 150px;
+    height: 30px; ;
+    
 }
